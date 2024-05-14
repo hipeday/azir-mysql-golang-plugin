@@ -1,0 +1,34 @@
+{
+  "name": "mysql-golang-100",
+  "language": "golang",
+  "invoke_id": "1",
+  "home": "/Users/coloxan/GolandProjects/azir-mysql-golang-plugin",
+  "notification": {
+    "type": "UNIX",
+    "address": "/Users/coloxan/GolandProjects/azir-mysql-golang-plugin/mysql-golang-100/data/1.sock",
+    "enabled": true
+  },
+  "suffix": "",
+  "version": "1.0.0",
+  "description": "MySQL plugin for golang",
+  "logPath": "${name}_${language}_${version}.log",
+  "cmd": {
+    "linux": ["mysql"],
+    "darwin": ["mysql"],
+    "windows": ["mysql"]
+  },
+  "parameter": {
+    "webhook": {
+      "type": "string",
+      "description": "Webhook URL",
+      "required": false,
+      "default": null
+    },
+    "action": {
+      "type": "string",
+      "description": "Action: databases, tables, columns, rows",
+      "required": true,
+      "default": null
+    }
+  }
+}
